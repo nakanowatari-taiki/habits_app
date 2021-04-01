@@ -1,0 +1,33 @@
+<%= render "shared/header" %>
+<div class = "main-page">
+ <div class = "main-title">
+    <h2 class = "name" >Welcame <%= current_user.nickname %></h2>
+    <%= link_to "Post", new_plan_path, class: "post" %>
+ </div>
+   <h3 class ="main-phrase">毎日のトレーニングの内容、トレーニング情報をPost(投稿)！<br>みんなとShareしよう！</h3>
+<% if flash[:notice]%>
+<h3 class = "flash-message"><%= flash[:notice]%></h3>
+<% end %>
+<div class = "main-contents">
+  <h2 class = "main-posts">Posts!</h2>
+   <ul class = "post-list">
+      <% @plans.each do |plan| %>
+      <li class = "list">
+    <div class = "post-info">
+      <h3 class ="user-name">
+       <%= plan.user.nickname%>
+      </h3>
+      <div class = "post-data">  
+        <span> <%= plan.date %><br><%= plan.part.name %></span>
+      </div>
+        <div class ="post-texts">
+          <%= plan.text %>
+        </div>
+          <%= link_to "#{plan.user.nickname}さんの投稿にコメントしよう！",  plan_path(plan.id), method: :get ,class:"com-button"%> 
+     </div>
+     </li>    
+  <% end %>
+   </ul>
+</div>  
+</div>
+<%= render "shared/footer" %>

@@ -1,0 +1,80 @@
+<%= render "shared/header" %>
+<div class= "main">
+<%# /タイトル部分 %>
+   <section class="home-hero wrapper">
+   <h2>運動を習慣化しよう！</h2>
+   <p>
+   運動を習慣化して健康的な体を手に入れませんか？
+    <br><strong>【なりたい自分】</strong>にきっと慣れる！！
+   </p>
+   <% if user_signed_in? %>
+     <%= link_to 'mainpage', new_user_registration_path, class: "sing-button" %>
+   <% else %>
+     <%= link_to 'sign up', new_user_registration_path, class: "sing-button" %>
+   <% end %>
+   </section>
+<%# /グラフ部分 %>
+ <div class="wrappaer content">  
+   <div class="home-chart"> 
+      <h2 class = "chart-title">運動習慣がない人</h2>
+      <div class="pie"></div>
+      <ul class ="list-style">
+        <li class ="list-orenge">運動習慣が<strong>ない</strong>人約72%</li>
+        <li class ="list-green">運動習慣が<strong>ある</strong>人約28%</li>
+        <li class ="list-icon">※2018年厚生労働省調べ</li>
+      </ul>
+   </div>
+   <div class="home-text">
+      <h2 class ="text-title"><u>運動習慣がある人は４人に1人</u></h2>
+      <p>
+      厚生労働省の平成30年(2018)「国民健康・栄養調査」による「運動習慣者の状況」は左のグラフとなっている。
+       <br>運動習慣のある者の割合は、男性で31.8％、女性で25.5％であり、この10 年間でみると、
+       男性では有意な増減はなく、女性では有意に減少している。
+       <br>本サイトでは、そんな現状を打破するために、日々の運動の投稿や運動の知識を共有し、<strong>運動習慣を得る</strong>ことが目的である。
+      </p>
+   </div> 
+ </div>
+
+ <%# /サブタイトル部分 %>
+  <section class = "home-sub">
+   <h2><u>バランスの良い食事を！</u></h2>
+   <p>
+   運動だけでは理想の体を手に入れることはできません。
+   <br>Protein(タンパク質)、Fat（脂質）、Carbohydratre(炭水化物)をバランスよくとりましょう。
+   <br>理想バランスはp15%、F25%、C60%と言われています。</p>
+   </section>
+
+<%# /サブタイトル部分2 %>
+
+<div class="wrappaer content">  
+   <div class="sub-chart"> 
+      <h2 class = "sub-chart-title">20際以上の肥満の割合</h2>
+      <div class="circle"></div>
+      <ul class ="list-chart">
+        <li class ="list-blue">BMIが25以下</li>
+        <li class ="list-yellow">BMIが25以上</li>
+        <li class ="icon">※2019年厚生労働省調べ</li>
+      </ul>
+   </div>
+   <div class="home-text">
+      <h2 class ="sub-text-title"><u>男性は約３割、女性は約２割が肥満</u></h2>
+      <p>
+      厚生労働省「国民健康・栄養調査報告」によると、20歳以上の人の肥満の割合は男性33.0％、女性22.3％となっています。
+      </p>
+   </div> 
+ </div>
+
+ <%# /サービスイメージ %>
+ <section class="service wrapper">
+   <h2><u>サービスイメージ</u></h2>
+   <p>
+    毎日のトレーニングの記録、トレーニングの疑問点を投稿できます。
+    <br>気になった投稿にコメントすることもできます。
+    毎日の投稿を記録し他の人と共有することによって、運動を習慣化することが目的です！
+    <br><strong>毎日の積み重ねがなりたい自分になる第一歩です！</strong>
+
+   </p>
+   </section>
+ 
+</div>   
+<%= render "shared/footer" %>

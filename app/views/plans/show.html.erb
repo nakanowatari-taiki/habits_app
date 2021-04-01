@@ -1,0 +1,35 @@
+<%= render "shared/header" %>
+<div class="main-comments">
+  <h1 class = "com-title" ><%= @plan.user.nickname %> post</h1>
+ 
+
+    <ul class = "com-main"> 
+      <li class="com-list">
+        <div class = "comments-data">  
+          <span><%= @plan.date%><br><%= @plan.part.name%></span>
+        </div>
+         <div class ="comments-text">
+          <%= @plan.text%>
+           </div>
+            <p class ="sub-com-title">☟☟コメントしよう☟☟</p>
+        <%= form_with(model: [@plan, @comment], local: true) do |form| %>
+         <%= form.text_area :com, placeholder: "コメントする", rows: "2",class: 'com' %>
+         <%= form.submit "Comment",class: "coms-button" %>     
+        <% end %>
+        </li> 
+    </ul> 
+    
+     <div class="comments">
+        <h3 class ="com-plan"> ☟☟☟コメント一覧☟☟☟</h3>
+        <% @comments.reverse.each do |comment| %>
+        <p>
+          <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}", class:"com-table"%></strong>
+          :<%= comment.com %>
+        </p>
+      <% end %>
+      
+     </div>
+</div>
+
+
+<%= render "shared/footer" %>

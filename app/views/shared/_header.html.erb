@@ -1,0 +1,19 @@
+<div class = "header">
+ <div class = "container">
+   <div class = "header-left">
+     <a href = "/" >Let'go Fitness</a>
+   </div>
+    
+   <div class = "header-right">
+     <% if user_signed_in? %>
+      <%= link_to 'Logout',destroy_user_session_path , method: :delete, class: "header-button" %> 
+      <%= link_to 'main page',plans_path ,class: "header-button"%>
+      <%= link_to "My page",  "/users/#{current_user.id}",class: "header-button"%>
+     <% else %>
+      <%= link_to 'sign up', new_user_registration_path, class: "header-button" %>
+      <%= link_to 'Login', new_user_session_path, class: "header-button" %>
+     <% end %>
+   </div>
+  <div class = "clear"></div>
+ </div>
+</div>

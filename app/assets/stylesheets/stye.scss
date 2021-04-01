@@ -1,0 +1,694 @@
+@charset "utf-8";
+/*ヘッダー部分*/
+.header{
+  height: 100px;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0 0 10px #dddddd; 
+  z-index: 100;
+}
+
+.header-left a{
+  font-size: 70px;
+  font-family: 'Caveat', cursive;
+  text-decoration: none;
+  color: black;
+  width: 50%;
+  float: left;
+  margin-top: 8px;
+}
+.header-right{
+  float: right;
+  margin-top: 40px;
+  
+}
+.header-button{
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+  margin-left: 5px;
+  padding: 0 5px;
+  font-weight: bold;
+  border: ridge ;
+}
+.clear{
+  float: both;
+}
+.container {
+  max-width: 1580px;
+  padding: 0 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-right a:hover{
+  background-color: skyblue;
+  transition: background-color 0.5s;
+}
+
+/*ヘッダーここまで*/
+
+/*トップページ*/
+.main {
+  padding-top: 100px;
+  padding-bottom: 0;
+}
+
+.home-hero{
+  background: image-url('main.jpg')no-repeat center right / 70vw auto;
+  padding: 5.5rem 1rem 3rem;
+  margin: 40px 10px ;
+}
+
+
+.home-hero h2{
+  font-size: 1.5rem;
+  margin: 8vw 0 12vw;
+  background: rgba(255,255,255,.8);
+  padding: 1rem;
+  display: inline-block;
+}
+
+.home-hero p{
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+.sing-button{
+  font-family: 'Caveat', cursive;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  border: ridge ;
+  font-size: 2.5rem;
+  margin-left: auto;
+  padding: 10px 40px;
+  
+}
+.sing-button:hover{
+  background-color: skyblue;
+  transition: background-color 0.5s;
+}
+
+
+
+@media (min-width: 600px){
+  .home-hero{
+    padding: 16vw 1rem;
+  }
+  .home-hero h2{
+    font-size: 2.5rem;
+    margin: 0 0 2rem;
+    background: none;
+    padding: 0;
+  }
+  .home-hero p{
+    width: 38vw;
+  }
+  }  
+
+/*グラフ*/  
+@media (min-width: 600px){
+  .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    background-color: rgb(247, 240, 240);
+    margin-top: 30px;
+  }
+}
+.pie {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #1abc9c;
+  background-image: linear-gradient(to right, transparent 50%, #fe8a01 0);
+}
+.pie::before {
+  content: '';
+  display: block;
+  margin-left: 50%;
+  height: 100%;
+  border-radius: 0 100% 100% 0 / 50%;
+  background-color: inherit;
+  transform-origin: left;
+  background-color: #fe8a01;
+  transform:rotate(.2turn);
+}
+
+.list-style {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.list-style li{
+  padding-left: 1em;
+  text-indent: -.7em;
+}
+
+.list-orenge::before {
+  content: '■';
+  color: #fe8a01;
+  font-size: 1.2em;
+  padding: 0 8px 0 0;
+}
+
+.list-green::before {
+  content: '■';
+  color: #1abc9c;
+  font-size: 1.2em;
+  padding: 0 8px 0 0;
+}
+.list-icon{
+  font-size: 1rem;
+  padding: 0 8px 0 0;
+}
+/*グラフここまで*/
+
+/*グラフ関係*/
+.home-chart{
+  padding: 20px 80px;
+  margin: 10px;
+}
+
+.chart-title{
+  font-size: 2em;
+}
+
+.text-title{
+  font-size: 2rem;
+  padding-bottom: 30px;
+}
+
+/*グラフ関係ここまで*/
+/*サブタイトル*/
+.home-sub{
+  background: image-url('main-sub.jpg')no-repeat center right / 70vw auto;
+  padding: 5.5rem 1rem 3rem; 
+  margin: 40px 10px ;
+}
+.home-sub h2{
+  font-size: 1.5rem;
+  margin: 8vw 0 12vw;
+  background: rgba(255,255,255,.8);
+  padding: 1rem;
+  display: inline-block;
+}
+
+.home-sub p{
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 600px){
+.home-sub{
+  padding: 16vw 2rem;
+}
+.home-sub h2{
+  font-size: 2.5rem;
+  margin: 0 0 2rem;background: none;
+  padding: 0;
+}
+.home-sub p{
+  width: 38vw;
+}
+}
+/*サブタイトルここまで*/
+
+/*肥満について*/
+
+@media (min-width: 600px){
+  .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    background-color: rgb(247, 240, 240);
+    margin-top: 30px;
+  }
+}
+.circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: yellow;
+  background-image: linear-gradient(to right, transparent 50%, blue 0);
+}
+.circle::before {
+  content: '';
+  display: block;
+  margin-left: 50%;
+  height: 100%;
+  border-radius: 0 100% 100% 0 / 50%;
+  background-color: inherit;
+  transform-origin: left;
+  background-color: blue;
+  transform:rotate(.2turn);
+}
+
+.list-chart {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.list-chart li{
+  padding-left: 1em;
+  text-indent: -.7em;
+}
+
+.list-blue::before {
+  content: '■';
+  color: blue;
+  font-size: 1.2em;
+  padding: 0 8px 0 0;
+}
+
+.list-yellow::before {
+  content: '■';
+  color: yellow;
+  font-size: 1.2em;
+  padding: 0 8px 0 0;
+}
+.icon{
+  font-size: 1rem;
+  padding: 0 8px 0 0;
+}
+
+.sub-chart{
+  padding: 20px 80px;
+  margin: 10px;
+}
+
+.sub-chart-title{
+  font-size: 2em;
+}
+
+.sub-text-title{
+  font-size: 2rem;
+  padding-bottom: 30px;
+}
+/*肥満ここまで*/
+/*サービスイメージ部分*/
+.service{
+  height: 500px;
+  background: image-url('service.png')no-repeat center right / 55vw auto;
+  padding: 5.5rem 1rem 3rem;
+}
+.service h2{
+  margin:40px ;
+  background: rgba(255,255,255,.8);
+  padding: 1rem;
+  display: inline-block;
+}
+
+@media (min-width: 600px){
+  .service{
+    padding: 16vw 1rem;
+  }
+  .service h2{
+    font-size: 3rem;
+    margin: 0 0 2rem;
+    background: none;
+    padding: 0;
+  }
+  .service p{
+    width: 38vw;
+  }
+}
+
+
+/*フッター部分*/
+.footer {
+  height: 10vh;
+  width: 100%;
+  bottom: 0;
+  background-color: white;
+  color: black;
+  z-index: 100;
+  box-shadow: 0 0 10px #dddddd; 
+  font-family: 'Caveat', cursive;
+}
+
+.footer-left {
+  float: left;
+}
+
+.footer-right {
+  float: right;
+  padding-top: 50px;
+}
+
+.footer-left p{
+  margin-bottom: 8px;
+}
+
+/*新規登録ページ、ログインページ*/
+.user-contents{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: linear-gradient(#ffffff,  #ffe5ae);
+}
+.container{
+  text-align: center;
+  font-family: 'Caveat', cursive;
+}
+.registration-title{
+  font-size: 50px;
+}
+.contact-title{
+  font-size: 68px;
+}
+
+.field{
+  font-size: 40px;
+}
+.input{
+  width: 40%;
+  margin-top: 5px;
+  height: 30px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
+.button{
+  font-family: 'Caveat', cursive;
+  font-size: 32px;
+  text-decoration: none;
+  color: black;
+  margin-top: 30px;
+  font-weight: bold;
+  border: 1px solid black ;
+}
+.login-button{
+  font-family: 'Caveat', cursive;
+  font-size: 38px;
+  text-decoration: none;
+  color: black;
+  margin-top: 40px;
+  font-weight: bold;
+  border: 1px solid black ;
+  padding: 5px 20px;
+}
+
+.button:hover{
+  background-color:skyblue;
+  transition: background-color 0.5s;
+}
+.login-button:hover{
+  background-color: skyblue;
+  transition: background-color 0.5s;
+}
+/*新規登録、ログインページ*/
+/*deviseエラーメッセージ*/
+.error-message{
+  list-style: none;
+}
+/*deviseエラーメッセージここまで*/
+
+/*メインページ*/
+.name{
+  margin-left: 30px;
+  font-family: 'Caveat', cursive;
+  font-size: 50px;
+}
+
+.post{
+  font-family: 'Caveat', cursive;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  border: ridge ;
+  margin: 50px;
+  padding: 10px 40px;
+  font-size: 40px;
+  margin-right: auto;
+  background-color: white;
+}
+
+.post:hover{
+  background-color: skyblue;
+  transition: background-color 0.5s;
+}
+.main-title{
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-phrase{
+  margin-left: 20px;
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+}
+.main-page{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  height: 70vh;
+  background: linear-gradient(#ffffff,  #ffe5ae);
+  overflow-y: scroll;
+}
+.main-posts{
+  font-size: 40px;
+  font-family: 'Caveat', cursive;
+
+}
+.post-texts{
+  height: 200px;
+  width: 400px;
+  font-size: 20px;
+  border: black 2px solid;
+}
+
+.post-button{
+  font-family: 'Caveat', cursive;
+  color: black;
+  font-weight: bold;
+  border: solid 2px black ;
+  font-size: 30px;
+  background-color: white;
+  font-weight: bold;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.post-button:hover{
+  background-color: skyblue;
+  transition: background-color 0.5s;
+}
+.main-posts{
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.user-name {
+  font-size: 3vh;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.com-button{
+  text-decoration: none;
+  color: black;
+}
+.com-button:hover{
+  background-color: skyblue;
+}
+/*メインページここまで*/
+/*メインページ、マイページ部分*/
+.post-list {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+.post-list>.list {
+  width: 37vh;
+}
+.post-info {
+  font-family: 'Caveat', cursive;
+  color: black;
+}
+.post-data {
+  font-size: 1.5vh;
+  display: flex;
+  justify-content: space-between;
+}
+.post-texts {
+  width: 30vh;
+  height: 12vh;
+  position: relative;
+  background-color: white;
+  border: 2px solid black;
+  overflow-y: scroll;
+  padding-left: 10px;
+}
+/*メインページ、マイページ部分ここまで*/
+
+
+/*投稿ページ、編集ページ*/
+.post-page{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  height: 70vh;
+  background: linear-gradient(#ffffff,  #ffe5ae);
+}
+.pos{
+  display: flex;
+  display: block;
+  text-align: center;
+}
+.post-menu{
+  font-family: 'Caveat', cursive;
+  font-size: 50px;
+}
+.habits{
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+}
+.post-form{
+  text-align: center;
+}
+.post-text{
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.date-select{
+  width: 150px;
+  border: solid 2px black ;
+}
+.date-select:hover{
+  background-color: skyblue;
+  transition: background-color 0.5s;
+}
+.genre-select{
+  border: solid 2px black ;
+}
+
+.genre-select:hover{
+  background-color: skyblue;
+  transition: background-color 0.5s;
+}
+
+/*投稿ページ、編集ページここまで*/
+
+/*フラッシュメッセージ*/
+.flash-message{
+  margin: auto;
+  background-color: skyblue;
+  height: 26px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: 'Caveat', cursive;
+}
+/*マイページ*/
+.my-pages{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  height: 70vh;
+  background: linear-gradient(#ffffff,  #ffe5ae);
+  overflow-y: scroll;
+}
+.my-page-title{
+  font-family: 'Caveat', cursive;
+  text-align: center;
+  font-size: 60px;
+}
+.my-page-button{
+  text-decoration: none;
+  color: black;
+}
+.my-page-button:hover{
+  background-color: skyblue;
+  transition: background-color 0.5s;
+}
+/*マイページここまで*/
+
+/*編集ページ*/
+
+/*コメントページ*/
+.main-comments{
+  padding-top: 100px;
+  background: linear-gradient(#ffffff,  #ffe5ae);
+}
+.com-title{
+  font-family: 'Caveat', cursive;
+  font-size: 60px;
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+.sub-com-title{
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.com-main{
+  list-style: none;
+  margin-left: 20px;
+}
+.comments-data{
+  font-size: 20px;
+}
+.comments-text{
+  width: 30vh;
+  height: 12vh;
+  background-color: white;
+  border: 2px solid black;
+  overflow-y: scroll;
+  padding-left: 10px;
+}
+
+.coms-button{
+  font-family: 'Caveat', cursive;
+  font-size: 28px;
+  width: 100px;
+  height: 50px;
+  border: 2px solid black;
+  background-color: white;
+  color:black;
+  display: block;
+}
+.com{
+ margin-top: 0;
+ height: 7vh;
+ width: 30vh;
+ background-color: white;
+ border: 2px solid black;
+ overflow-y: scroll;
+ font-size: 20px;
+}
+
+
+ .coms-button:hover{
+   background-color: skyblue;
+   transition: background-color 0.5s;
+ }
+
+ .com-table{
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+ }
+
+ .comments{
+   color: black;
+   overflow-y: scroll;;
+   height: 300px;
+ }
+
+ .com-plan{
+   font-size: 20px;
+   padding-left: 10px;
+   color: black;
+ }
+ 

@@ -18,8 +18,13 @@
 [![Image from Gyazo](https://i.gyazo.com/ea78c980edb86746ddd03deca778089e.png)](https://gyazo.com/ea78c980edb86746ddd03deca778089e)
 コメント機能
 [![Image from Gyazo](https://i.gyazo.com/5a98bcd72831ca6202b4b5a28d32396f.png)](https://gyazo.com/5a98bcd72831ca6202b4b5a28d32396f)
+
 ## URL
 https://habits-app-91-33539.herokuapp.com/
+
+## Basic認証パスワード
+・ユーザー名： "hoge"
+・パスワード： "1234"
 
 ## 機能
 ・ユーザー登録機能
